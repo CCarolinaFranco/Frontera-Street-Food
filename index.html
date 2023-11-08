@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="img/FR_IdVisual_ok-26.jpg">
   </head>
   <body>
+    <!--menu principal-->
     <section class="menu-principal">
       <div class="logo">
         <img src="img/FR_IdVisual_ok-26.jpg" class="Frontera">
@@ -35,27 +36,28 @@
       <i class="fas fa-bars" id="btnManuOpen"></i>
     </section>
 
-
+     <!--slider de productos-->
     <section id="menu-products">
       <section class="contenedor-principal">
-        <button id="btn-izquierda"><span class="fas fa-angle-left"></span></button>
-        <div class="slider">
-          <div class="container-productos">
+        <button id="btn-izquierda" class="js-btn-izquierda"><span class="fas fa-angle-left"></span></button>
+
+
+        <div class="slider js-slider">
+           <div class="container-productos">
             <div class="descripcion-productos">
               <h2>Producto <b>premium</b></h2>
               <h1>Taco de carne</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus vero nisi minima quaerat dolorum distinctio aut quas minus.  </p>
-        <button class="btn">Solicitala aqui!<span class="fas fa-angle-right"></span></button>
+              <button class="btn">Solicitala aqui!<span class="fas fa-angle-right"></span></button>
             </div>
 
             <div class="imagen-productos">
               <img src="img/taco.webp" alt="">
 
             </div>
-          </div>
-        </div>
-
-        <div class="container-productos">
+           </div>
+        
+          <div class="container-productos">
           <div class="descripcion-productos">
             <h2>Producto <b>premium</b></h2>
             <h1>chilli</h1>
@@ -67,9 +69,9 @@
             <img src="img/chilli.webp" alt="">
 
           </div>
-        </div>
-
-        <div class="container-productos">
+          </div>
+       
+          <div class="container-productos">
           <div class="descripcion-productos">
             <h2>Producto <b>premium</b></h2>
             <h1>Papas Andinas</h1>
@@ -79,11 +81,10 @@
 
           <div class="imagen-productos">
             <img src="img/papas.webp" alt="">
-
           </div>
-        </div>
+          </div>
 
-        <div class="container-productos">
+          <div class="container-productos">
           <div class="descripcion-productos">
             <h2>Producto <b>premium</b></h2>
             <h1>Carne con salsa</h1>
@@ -95,12 +96,12 @@
             <img src="img/carne.webp" alt="">
 
           </div>
-        </div>
+          </div>
 
-        <div class="container-productos">
+          <div class="container-productos">
           <div class="descripcion-productos">
             <h2>Producto <b>premium</b></h2>
-            <h1>Pcada</h1>
+            <h1>Picada</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus vero nisi minima quaerat dolorum distinctio aut quas minus.</p>
             <button class="btn">Solicitala aqui!<span class="fas fa-angle-right"></span></button>
           </div>
@@ -109,13 +110,54 @@
             <img src="img/picada.jpg" alt="">
 
           </div>
+          </div>
         </div>
 
-        <button id="btn-derecha"><span class="fas fa-angle-right"></span></button>
+        <button id="btn-derecha" class="js-btn-derecha"><span class="fas fa-angle-right"></span></button>
+      
       </section>
-
-
     </section>
+
+      <!--seccion de servicios-->
+      <section id="servicios" class="js-servicios">
+        <div class="servicios-titulos js-servicios-titulos">
+          <h2 class="subtitulos">La mejor comida en Cordoba</h2>
+          <h1 class="titulos">Bienvenidos a Frontera Food</h1>
+        </div>
+
+        <div class="servicios-container">
+          
+             <div class="imagen-central">
+              <img src="/img/sopa.webp" alt="soup">
+             </div>
+
+            <div class="item calidad">
+               <p><span class="fas fa-pizza-slice"></span></p>
+               <p class="titulo-item">Calidad</p>
+               <p class="texto-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, Recusandae.</p>
+            </div>
+
+            <div class="item ingredientes">
+               <p><span class="fas fa-cheese"></span></p>
+               <p class="titulo-item">Ingredientes</p>
+               <p class="texto-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, Recusandae.</p>
+            </div>
+
+            <div class="item rapidez">
+               <p><span class="fas fa-clock"></span></p>
+               <p class="titulo-item">Rapidez</p>
+               <p class="texto-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, Recusandae.</p>
+            </div>
+
+             <div class="item delivery">
+              <p><span class="fas fa-shipping-fast"></span></p>
+              <p class="titulo-item">Delivery</p>
+              <p class="texto-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, Recusandae.</p>
+             </div>
+
+
+        </div>
+      </section>
 
     <footer class="footer">
       <p>&copy; 2023 Form JS</p>

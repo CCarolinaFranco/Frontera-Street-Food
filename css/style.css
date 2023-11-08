@@ -1,5 +1,5 @@
 :root {
-  --color-primario: #9e8658;
+  --color-primario: rgb(129, 141, 121);
   --color-secundario: #E92F3D;
   --color-background: #babfc0;
   --color-background-sombra: #E92F3D30;
@@ -15,7 +15,7 @@
 }
 
 body {
-  background: var(--color-background);
+  background: url('/img/4@2x.png');
 }
 
 .titulos {
@@ -31,7 +31,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
-  color: var(--color-primario);
+  color: var(--color-background);
 }
 
 .btn {
@@ -72,14 +72,16 @@ body {
 }
 
 .logo img {
-  width: 130px;
+  width: 75px;
   cursor: pointer;
+  height: 75px;
 }
 
 .roosterlogo {
   width: 80px;
   height: 65px;
 }
+
 
 .menu-bar {
   display: flex;
@@ -126,7 +128,7 @@ body {
 
 .menu-principal i{
   cursor: pointer;
-  color: black;
+  color: rgb(228, 215, 215);
   font-size: 30px;
   float: right;
   display: none;
@@ -148,6 +150,7 @@ body {
   z-index: 0;
 
 }
+
 
 .contenedor-principal #btn-izquierda,
 .contenedor-principal #btn-derecha{
@@ -187,6 +190,8 @@ body {
   overflow: hidden;
   height: calc(100vh - 80px);
   scroll-behavior: smooth;
+
+ 
 }
 
 .container-productos{
@@ -198,17 +203,16 @@ body {
 
 }
 
-
 .descripcion-productos{
   width: 30%;
 
 }
 
-
 .descripcion-productos h1{
   font-size: 5vw;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--color-background);
 
 }
 
@@ -216,25 +220,20 @@ body {
   text-transform: lowercase;
   font-size: 2.2vw;
   font-weight: 100;
-
-
+  color:var(--color-background);
 }
-
 
 .descripcion-productos p{
   color: var(--color-primario);
   font-style: italic;
   text-align: justify;
-
 }
 
 .imagen-productos{
   width: 50%;
   display: flex;
   justify-content: center;
-
 }
-
 
 .imagen-productos img{
   width: 100%;
@@ -245,8 +244,45 @@ body {
 }
 
 .container-productos:hover .imagen-productos img{
-transform: scale(1.15);
+  transform: scale(1.15);
+  
+}
 
+
+
+
+/*media querys*/
+
+
+
+@media screen and (max-width: 850px) {
+  .container-productos{
+    flex-direction: column;
+  }
+  .descripcion-productos{
+    width: 70%;
+    order: 1;
+  }
+  .descripcion-productos .btn{
+    padding: 10px 20px;
+
+  }
+  .descripcion-productos .btn:hover{
+    padding: 10px 30px;
+    
+  }
+  .imagen-productos{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    
+    
+  }
+  .imagen-productos img{
+    padding-right: 10px;
+    padding-left: 10px;
+    
+  }
 }
 
 
@@ -254,7 +290,7 @@ transform: scale(1.15);
 
 
 
-/*media querys*/
+
 
 @media screen and (max-width: 650px) {
   .menu-principal{
@@ -311,5 +347,20 @@ transform: scale(1.15);
 }
 
 
+/* slider productos */
 
+.slider{
+  height: calc(100vh - 0px);
+}
 
+.imagen-productos{
+  width: 65%;
+}
+.descripcion-productos h1{
+  font-size: 7vw;
+
+}
+.descripcion-productos h2{
+  font-size: 3vw;
+  
+}
