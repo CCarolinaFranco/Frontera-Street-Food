@@ -364,3 +364,36 @@ body {
   font-size: 3vw;
   
 }
+
+
+/* seccion services */
+
+
+#servicios{
+  height: 100vh;
+  /* background: #fff;  */
+  padding: 40px;
+}
+
+.servicios-titulos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.servicios-container{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 30px;
+  grid-template-areas: "ingredientes  imagen  rapidez"
+                       "calidad       imagen  delivery";
+}
+
+
+.calidad{
+  grid-row: calidad;
+  grid-column: calidad;
+}
