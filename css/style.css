@@ -15,7 +15,9 @@
 }
 
 body {
-  background: url('/img/4@2x.png');
+  background: url('/img/4@2x.png')center/cover no-repeat;;
+  background-color: var(--color-background); 
+
 }
 
 .titulos {
@@ -371,7 +373,7 @@ body {
 
 #servicios{
   height: 100vh;
-  /* background: #fff;  */
+  background: #fff;  
   padding: 40px;
 }
 
@@ -397,3 +399,83 @@ body {
   grid-row: calidad;
   grid-column: calidad;
 }
+
+.ingredientes{
+  grid-row: ingredientes;
+  grid-column: ingredientes;
+}
+
+.rapidez{
+  grid-row: rapidez;
+  grid-column: rapidez;
+}
+
+.delivery{
+  grid-row: delivery;
+  grid-column: delivery;
+}
+
+.imagen-central{
+  grid-row: imagen;
+  grid-column: imagen;
+  transition: all 0.5s;
+}
+
+.imagen-central:hover{
+  transform: scale(1.1);
+
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item span{
+  width: 95px;
+  font-size: 40px;
+  color: var(--color-secundario);
+  padding: 20px;
+  border: 5px double #dedede;
+  border-radius: 50%;
+  transition: all 0.5s;
+
+}
+
+.item span:hover{
+  background: var(--color-secundario);
+  color: #fff;
+}
+
+.ingredientes span,
+.calidad span{
+  color: var(--color-primario);
+
+
+}
+
+.ingredientes span:hover,
+.calidad span:hover{
+  background: var(--color-primario);
+  color: #fff;
+}
+
+.item .titulo-item{
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+.item .texto-item{
+  font-size: 14px;
+  color: var(--color-texto);
+  text-align: center;
+  font-style: italic;
+  padding: 0 20px;
+
+}
+
