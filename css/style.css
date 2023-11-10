@@ -163,8 +163,8 @@ body {
   background: transparent;
   cursor: pointer;
   font-size: 40px;
-  margin: 0 15px;
-  color: var(--color-secundario);
+  margin: 0 5px;
+  color: var(--color-primario);
   z-index: 500;
   outline: none;
   transition: all 0.3s;
@@ -206,15 +206,16 @@ body {
 }
 
 .descripcion-productos{
-  width: 30%;
+  width: 20%;
 
 }
 
 .descripcion-productos h1{
   font-size: 5vw;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--color-background);
+ 
 
 }
 
@@ -240,8 +241,8 @@ body {
 .imagen-productos img{
   width: 100%;
   transform: scale(1.1);
-  transition:all 0.3;
-  padding-left: 45px;
+  transition:all 0.3s;
+  padding-left: 50px; */
 
 }
 
@@ -255,7 +256,7 @@ body {
 
 #servicios{
   height: 100vh;
-  background: #fff;  
+  /* background: #fff;   */
   padding: 40px;
 }
 
@@ -264,6 +265,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: var(--color-primario);
+  padding-bottom: 45px;
+  padding-top: 30px;
 }
 
 .servicios-container{
@@ -298,11 +302,20 @@ body {
 }
 
 .imagen-central{
-  grid-row: imagen;
+  grid-row: imagen; 
   grid-column: imagen;
   transition: all 0.5s;
-}
 
+  /* grid-row: span 2;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-central img{
+  width: 100%;
+  max-height: 100%;
+  /*  */
+}
 .imagen-central:hover{
   transform: scale(1.1);
 
@@ -331,14 +344,18 @@ body {
 }
 
 .ingredientes span,
-.calidad span{
+.calidad span,
+.rapidez span,
+.delivery span{
   color: var(--color-primario);
 
 
 }
 
 .ingredientes span:hover,
-.calidad span:hover{
+.calidad span:hover,
+.rapidez span:hover,
+.delivery span:hover{
   background: var(--color-primario);
   color: #fff;
 }
@@ -352,6 +369,10 @@ body {
 
 }
 
+.subtitulos{
+  font-style: italic;
+
+}
 .item .texto-item{
   font-size: 14px;
   color: var(--color-texto);
@@ -364,25 +385,26 @@ body {
 /* seccion de equipo */
 
 #equipo{
-  /* height: 100vh;
+  height: 100vh;
   display: flex;
-   */
-  display: flex;
-  flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
-  overflow-x: scroll;
+   
+  /* display: flex;
+  flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea 
+  overflow-x: scroll; 
+  */
 }
 
 
 .persona{
-  /* flex-grow: 1; */
+  flex-grow: 1; 
   overflow: hidden;
   position: relative;
   transition: all 0.5s;
 
 }
-/* .persona:hover{
+.persona:hover{
   flex-grow: 3;
-} */
+} 
 
 
 .persona-imagen{
@@ -391,8 +413,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   filter: grayscale(80%);
-
-  height: 100%; /* Añadimos esta línea para ocupar el 100% del contenedor */
+  height: 100%;  /*Añadimos esta línea para ocupar el 100% del contenedor  */
   object-fit: cover;
 }
 
@@ -417,7 +438,7 @@ body {
 
 
 .persona-info h2{
-  font-size: 30px;
+  font-size: 35px;
   color: #fff;
   font-weight: 600;
   text-shadow: 2px 2px 3px rgb(129, 141, 121);
@@ -426,8 +447,8 @@ body {
 
 
 .persona-info p{
-  color: var(--color-texto);
-  font-size: 20px;
+  /* color: var(); arreglar color */
+  font-size: 25px;
   font-weight: 700;
   font-style: italic;
   margin-top: 8px;
@@ -450,8 +471,8 @@ body {
 
 }
 
-.social-media a:hover {
-  color: var(--color-primario);
+.social-media a:hover{
+  color: var(--color-secundario);
   background: transparent;
   transform: scale(2);
 }
@@ -476,11 +497,11 @@ body {
     padding: 10px 30px;
     
   }
-  /* .imagen-productos{
+  .imagen-productos{
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
-     } */
+     } 
     
  
   .imagen-productos img{
@@ -506,11 +527,6 @@ body {
 }
 
 }
-
-
-
-
-
 
 
 
@@ -565,11 +581,6 @@ body {
     font-size: 20px;
 
   }
-
-
-}
-
-
 /* slider productos */
 
 .slider{
@@ -587,6 +598,11 @@ body {
   font-size: 3vw;
   
 }
+
+}
+
+
+
 
 
 
