@@ -250,124 +250,6 @@ body {
   
 }
 
-
-
-
-/*media querys*/
-
-
-
-@media screen and (max-width: 850px) {
-  .container-productos{
-    flex-direction: column;
-  }
-  .descripcion-productos{
-    width: 70%;
-    order: 1;
-  }
-  .descripcion-productos .btn{
-    padding: 10px 20px;
-
-  }
-  .descripcion-productos .btn:hover{
-    padding: 10px 30px;
-    
-  }
-  .imagen-productos{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-    
-    
-  }
-  .imagen-productos img{
-    padding-right: 10px;
-    padding-left: 10px;
-    
-  }
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 650px) {
-  .menu-principal{
-    position: fixed;
-    top: 0;
-    margin-top: 0;
-    
-  }
-
-  .menu-principal i{
-    display: block;
-
-  }
-
-  .menu-bar{
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1000;
-    background: #333;
-    transition: all 1s;
-    transform: translateX(100%);
-  }
-  
-  .menu-bar .active{
-    transform: translateX(0%);
-
-  }
-
-  
-  .menu-bar i{
-    position: absolute;
-    right: 50px;
-    top: 50px;
-  }
-  .menu-bar .enlaces ul li{
-    display: block;
-    padding: 20px 10px;
-
-  }
-
-  .menu-bar .enlaces ul li a,
-  .menu-bar .sociales a{
-    font-size: 20px;
-
-  }
-
-
-}
-
-
-/* slider productos */
-
-.slider{
-  height: calc(100vh - 0px);
-}
-
-.imagen-productos{
-  width: 65%;
-}
-.descripcion-productos h1{
-  font-size: 7vw;
-
-}
-.descripcion-productos h2{
-  font-size: 3vw;
-  
-}
-
-
 /* seccion services */
 
 
@@ -478,4 +360,234 @@ body {
   padding: 0 20px;
 
 }
+
+/* seccion de equipo */
+
+#equipo{
+  /* height: 100vh;
+  display: flex;
+   */
+  display: flex;
+  flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+  overflow-x: scroll;
+}
+
+
+.persona{
+  /* flex-grow: 1; */
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+
+}
+/* .persona:hover{
+  flex-grow: 3;
+} */
+
+
+.persona-imagen{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: grayscale(80%);
+
+  height: 100%; /* Añadimos esta línea para ocupar el 100% del contenedor */
+  object-fit: cover;
+}
+
+.persona:hover .persona-imagen{
+  filter: grayscale(0%);
+}
+
+.persona-info{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.1s;
+  opacity: 0;
+}
+
+.persona:hover .persona-info{
+  opacity: 1;
+  bottom: 60px;
+  transition-delay: 0.3s;
+}
+
+
+.persona-info h2{
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 2px 2px 3px rgb(129, 141, 121);
+}
+
+
+
+.persona-info p{
+  color: var(--color-texto);
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 3px rgb(162, 175, 153);
+}
+
+.social-media a{
+  display:inline-block;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: var(--color-primario);
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+}
+
+.social-media a:hover {
+  color: var(--color-primario);
+  background: transparent;
+  transform: scale(2);
+}
+
+
+
+/*media querys*/
+
+@media screen and (max-width: 850px) {
+  .container-productos{
+    flex-direction: column;
+  }
+  .descripcion-productos{
+    width: 70%;
+    order: 1;
+  }
+  .descripcion-productos .btn{
+    padding: 10px 20px;
+
+  }
+  .descripcion-productos .btn:hover{
+    padding: 10px 30px;
+    
+  }
+  /* .imagen-productos{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+     } */
+    
+ 
+  .imagen-productos img{
+    padding-right: 10px;
+    padding-left: 10px;
+   
+
+    
+  }
+
+
+  /* seccion servicios */
+
+.servicios-container{
+  margin-top: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "ingredientes  rapidez "
+                       "calidad       delivery";
+
+}
+.imagen-central{
+  display: none;
+}
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+  .menu-principal{
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    
+  }
+
+  .menu-principal i{
+    display: block;
+
+  }
+
+  .menu-bar{
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    background: #333;
+    transition: all 1s;
+    transform: translateX(100%);
+  }
+  
+  .menu-bar .active{
+    transform: translateX(0%);
+
+  }
+
+  
+  .menu-bar i{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+  .menu-bar .enlaces ul li{
+    display: block;
+    padding: 20px 10px;
+
+  }
+
+  .menu-bar .enlaces ul li a,
+  .menu-bar .sociales a{
+    font-size: 20px;
+
+  }
+
+
+}
+
+
+/* slider productos */
+
+.slider{
+  height: calc(100vh - 0px);
+}
+
+.imagen-productos{
+  width: 65%;
+}
+.descripcion-productos h1{
+  font-size: 7vw;
+
+}
+.descripcion-productos h2{
+  font-size: 3vw;
+  
+}
+
+
+
 
