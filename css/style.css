@@ -15,7 +15,7 @@
 }
 
 body {
-  background: url('/img/4@2x.png')center/cover no-repeat;;
+  background: url('/img/IMG-20231110-WA0060.jpg')center/cover no-repeat;;
   background-color: var(--color-background); 
 
 }
@@ -69,7 +69,7 @@ body {
   height: 75px;
   padding: 0 30px;
   margin-top: 10px;
-  background: var(--color-primario);
+  /* background: var(--color-primario); */
   z-index : 1s;
 }
 
@@ -242,7 +242,8 @@ body {
   width: 100%;
   transform: scale(1.1);
   transition:all 0.3s;
-  padding-left: 50px; */
+  padding-left: 50px;  
+  
 
 }
 
@@ -338,6 +339,7 @@ body {
 
 }
 
+
 .item span:hover{
   background: var(--color-secundario);
   color: #fff;
@@ -366,6 +368,7 @@ body {
   font-weight: 700;
   text-align: center;
   padding-top: 10px;
+  color: var(--color-primario);
 
 }
 
@@ -381,6 +384,8 @@ body {
   padding: 0 20px;
 
 }
+
+
 
 /* seccion de equipo */
 
@@ -447,7 +452,7 @@ body {
 
 
 .persona-info p{
-  /* color: var(); arreglar color */
+  color:#fff; 
   font-size: 25px;
   font-weight: 700;
   font-style: italic;
@@ -501,6 +506,7 @@ body {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+    /* padding-top: 100px; */
      } 
     
  
