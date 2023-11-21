@@ -265,16 +265,16 @@
           <h1 class="titulo">Contactanos</h1>
         </div>
 
-        <form action="" id="formulario">
+        <form action="" id="formulario" class="js-formulario">
           <div class="two-fields">
 
             <div class="inputConIcon">
-              <input type="text" id="nombre" name="nombre" class="input-text" placeholder="Nombre">
+              <input type="text" id="nombre" name="nombre" class="input-text js-inputName" placeholder="Nombre">
               <i class="fas fa-user"></i>
             </div>
 
             <div class="inputConIcon">
-              <input type="email" id="email" name="email" class="input-email" placeholder="Email">
+              <input type="email" id="email" name="email" class="input-email js-inputEmail" placeholder="Email">
               <i class="fa-solid fa-square-envelope"></i>
             </div>
 
@@ -282,7 +282,7 @@
 
           <div class="fields">
             <div class="inputConIcon textareaIcon">
-              <textarea name="cometarios" id="cometarios" class="textarea" placeholder="Ingresa tu mensaje"></textarea>
+              <textarea name="cometarios" id="cometarios" class="textarea js-inputComments" placeholder="Ingresa tu mensaje"></textarea>
               <i class="fas fa-comments"></i>
             </div>
 
@@ -292,10 +292,23 @@
 
           </div>
 
-
         </form>
-
       </section>
+
+      <div class="alertas">
+        <div id="alertError" class="alert hide js-alertError">
+          <span class="icon-alert fas fa-explamation-circle"></span>
+          <span class="msg">Error:campos de entradas vacios.</span>
+
+        </div>
+
+        <div id="alertSuccess" class="alert hide js-alertSuccess">
+          <span class="icon-alert fas fa-check-circle"></span>
+          <span class="msg">Datos enviados! Gracias por contactarnos.</span>
+
+        </div>
+
+      </div>
 
         <script src="js/main.js"></script>
   </body>
