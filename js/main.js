@@ -13,8 +13,8 @@ const inputEmail = document.querySelector('.js-inputEmail');
 const inputComments = document.querySelector('.js-inputComments');
 const alertSuccess = document.querySelector('.js-alertSuccess');
 const alertError = document.querySelector('.js-alertError');
-
-
+const btnTop = document.querySelector('.js-btn-top');
+const logoTop = document.querySelector('.js-logo');
 
 
 
@@ -77,3 +77,49 @@ function validar(e){
 
 
 formulario.addEventListener("submit", validar);
+
+
+
+// boton ir para arriba
+
+
+
+window.addEventListener("scroll", function(){
+    const scroll = document.documentElement.scrollTop;
+    const fullSize = document.documentElement.scrollHeight; 
+    const sizeVP = document.documentElement.clientHeight;
+
+    if (scroll > 100) {
+        btnTop.classList.add("show");
+    } else {
+        btnTop.classList.remove("show");
+    }
+
+    const bottomThreshold = 50; // Threshold to determine proximity to the bottom
+    if (fullSize - (scroll + sizeVP) < bottomThreshold) {
+        btnTop.classList.add("scrollFinal");
+    } else {
+        btnTop.classList.remove("scrollFinal");
+    }
+});
+
+//evento click btnTop
+
+
+function handleClickBtnTop(e){
+    e.preventDefault();
+    window.scrollTo(0,0);
+
+}
+btnTop.addEventListener("click", handleClickBtnTop);
+
+
+//evento click in logo
+
+
+function handleClickLogoTop(e){
+    e.preventDefault();
+    window.scrollTo(0,0);
+
+}
+logoTop.addEventListener("click", handleClickLogoTop);
